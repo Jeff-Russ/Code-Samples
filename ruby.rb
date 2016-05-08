@@ -147,14 +147,14 @@ module Utils
   def starts_lower? str; !!(str.first =~ /[A-Z]/); end
 
   def prepend_each array, left_side
-    array.map { |elem| "#{left_side}#{elem}" }
+    array.map { |elem| elem = "#{left_side}#{elem}" }
   end
  
   def append_each array, right_side
-    array.map { |elem| "#{left_side}#{elem}#{right_side}" }
+    array.map { |elem| elem = "#{left_side}#{elem}#{right_side}" }
   end
 
   def wrap_each array, left_side, right_side
-    array.map { |elem| "#{left_side}#{elem}#{right_side}" }
+    array.map { |elem| elem = "#{left_side}#{elem}#{right_side}" }
   end
 end
